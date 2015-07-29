@@ -1,5 +1,5 @@
 # Immutables Android Example
-Small example of use [Immutables 2.0](http://immutables.github.io/) for Android and GSON.
+Small example of use [Immutables 2.0](http://immutables.github.io/) for Android and GSON. You can also follow the [Android start guide of Immutables](http://immutables.github.io/getstarted.html#android)
 
 With the follow `User` model:
 
@@ -35,6 +35,9 @@ User user = new UserFromJson().map(jsonUser);
 http://immutables.github.io/immutable.html
 
 ### Thanks to
+* **[elucash](https://github.com/elucash)** for all the support for Android on Immutables
+ * http://immutables.github.io/getstarted.html#android
+
 
 * **[saulmm](https://gist.github.com/saulmm)** and **[gabrielemariotti](https://gist.github.com/gabrielemariotti)** *for build.gradle configuration*
  * http://saulmm.github.io/squeezing-gradle-builds/
