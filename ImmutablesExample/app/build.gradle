@@ -51,12 +51,13 @@ android {
 dependencies {
     def appDependencies = rootProject.ext.appDependencies
 
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile appDependencies.appCompat
-    compile 'javax.annotation:jsr250-api:1.0'
-    provided appDependencies.value
-    compile appDependencies.gson
-    compile appDependencies.builder
+
+    apt appDependencies.immutablesValue
+    provided appDependencies.immutablesValue
+    provided appDependencies.immutablesBuilder
+    compile appDependencies.immutablesGson
+
     compile 'com.android.support:multidex:1.0.1'
 }
