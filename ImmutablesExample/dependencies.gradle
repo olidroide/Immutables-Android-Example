@@ -1,16 +1,19 @@
 ext {
     //Version
-    supportLibrary = '22.2.1'
-    immutablesLibrary = '2.0.16'
+    supportLibrary = '23.0.0'
+    immutablesLibrary = '2.0.19'
 
     //Support Libraries dependencies
     appDependencies = [
-            design                  : "com.android.support:design:$supportLibrary",
-            recyclerView            : "com.android.support:recyclerview-v7:$supportLibrary",
-            cardView                : "com.android.support:cardview-v7:$supportLibrary",
-            appCompat               : "com.android.support:appcompat-v7:$supportLibrary",
-            immutablesValue         : "org.immutables:value:$immutablesLibrary",
-            immutablesBuilder       : "org.immutables:builder:$immutablesLibrary",
-            immutablesGson          : "org.immutables:gson:$immutablesLibrary",
+            design                       : "com.android.support:design:$supportLibrary",
+            recyclerView                 : "com.android.support:recyclerview-v7:$supportLibrary",
+            cardView                     : "com.android.support:cardview-v7:$supportLibrary",
+            appCompat                    : "com.android.support:appcompat-v7:$supportLibrary",
+
+            immutablesValue              : "org.immutables:value:$immutablesLibrary",
+            immutablesValueAnnotations   : "org.immutables:value:$immutablesLibrary:annotations",
+            immutablesBuilder            : "org.immutables:builder:$immutablesLibrary",
+            immutablesGson               : "org.immutables:gson:$immutablesLibrary",
+            immutablesGsonAnnotations    : "org.immutables:gson:$immutablesLibrary:annotations",
     ]
 }
