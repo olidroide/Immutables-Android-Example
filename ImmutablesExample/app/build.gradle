@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.6'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.7'
     }
 }
 
@@ -12,8 +12,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
@@ -24,13 +24,13 @@ android {
         incremental !project.hasProperty('fast')
         preDexLibraries = false
         jumboMode = true
-        javaMaxHeapSize "4096M"
+        javaMaxHeapSize "2048M"
     }
 
     defaultConfig {
         applicationId "es.olidroide.immutablesexample"
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -43,9 +43,6 @@ android {
         }
     }
 
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
@@ -55,8 +52,9 @@ dependencies {
     compile appDependencies.appCompat
 
     apt appDependencies.immutablesValue
-    provided appDependencies.immutablesValue
+    provided appDependencies.immutablesValueAnnotations
     provided appDependencies.immutablesBuilder
+    //provided appDependencies.immutablesGsonAnnotations
     compile appDependencies.immutablesGson
 
     compile 'com.android.support:multidex:1.0.1'
